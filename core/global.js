@@ -100,8 +100,12 @@ module_file.forEach((ele)=>{
             }
         })
     }
-    definefunction(modulefunction,function_path)
-    definefunction(moduleservice,service_path)
+    if (fs.readdirSync(`${module_path}/${ele}`).includes("function")){
+        definefunction(modulefunction,function_path)
+    }
+    if (fs.readdirSync(`${module_path}/${ele}`).includes("service")){
+        definefunction(moduleservice,service_path)
+    }
     framework[ele]={
         modulefunction:modulefunction,
         moduleservice:moduleservice
