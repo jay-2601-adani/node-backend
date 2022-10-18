@@ -1,0 +1,10 @@
+[
+        {
+            "method": "get",
+            "path": "/manager",
+            "controller": "manager.data",
+            "middlewares": [],
+            "access":[],
+            "isgloblal":false
+        }
+]
